@@ -1,0 +1,58 @@
+/* FOOTER STYLE START */
+.footer_section{
+    padding: 30px 0;
+    color: $text_pri_color;
+    background: $section_bg;
+    
+    .footer_menu{
+        
+        
+        
+        ul{
+            margin: 0;
+            padding: 0;
+            
+            li{
+                list-style: none;
+                display: inline-block;
+                
+                
+               
+            
+                a{
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: $text_pri_color;
+                    padding: 0 10px;
+                    opacity: .7;
+                    position: relative;
+                    
+                     &:after{
+                        position: absolute;
+                        width: 1px;
+                        height: 10px;
+                        background: #fff;
+                        opacity: .3;
+                        content: '';
+                        left: 0;
+                        top: 5px;
+                    }
+                }
+                
+                .after_li{
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    h6{
+        font-size: 12px;
+        opacity: .5;
+        margin-top: 30%;
+    }
+}
+/* FOOTER STYLE END */

@@ -1,0 +1,54 @@
+/* About us Style Staart */
+.about_us{
+    padding: $section_padding;
+    background-image: url(assets/img/about-us.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $text_pri_color;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        opacity: .8;
+        @include after();
+    }
+    
+    .section_title{
+        text-transform: uppercase;
+        opacity: .7;
+    }
+    
+    p{
+        font-size: 12px;
+        margin-top: 20px;
+        margin-bottom: 0; 
+        opacity: .7;
+    }
+    
+    .social_icon{
+        margin-top: 20px;
+        
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        
+        li{
+            list-style: none;
+            display: inline-block;
+            
+            a{
+            text-decoration: none;
+            color: $text_pri_color;
+                font-size: 20px;
+            opacity: .7;
+                i{
+                padding: 10px;
+                margin-right: 10px;
+                border: 1px solid $text_pri_color;
+            }
+        }
+        }
+    }
+}
+/* About us Style End */

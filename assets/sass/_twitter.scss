@@ -1,0 +1,30 @@
+/* Twitter Style Start */
+.twitter_area{
+    padding: $section_padding;
+    color: $text_pri_color;
+    opacity: .7;
+    background: $theme_color;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        @include after();
+    }
+    
+    .section_title{
+        text-transform: uppercase;
+        
+    }
+    
+    .section_text{
+        margin-top: 30px;
+        
+        p{
+            margin-bottom: 0;
+            font-size: 14px;
+            word-spacing: 3px;
+            letter-spacing: 2px;
+        }
+    }
+}
+/* Twitter Style End */

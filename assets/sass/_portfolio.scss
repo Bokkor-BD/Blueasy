@@ -1,0 +1,103 @@
+/* Protfolio Style Start */
+.portfolio_area{
+    padding: $section_padding;
+    position: relative;
+    
+    &:after{
+        background: $section_bg;
+        @include after();
+    }
+    
+    h2{
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 400;
+        opacity: .7;
+    }
+
+    .portfolio_image{
+        background: $theme_color;
+        width: 100%;
+        height: 270px;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        margin-top: 20px;
+        
+        &:hover .portfolio_hover{
+            display: block;
+        }
+        
+        .portfolio_hover{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            display: none;
+            &:after{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                content: '';
+                left: 0;
+                top: 0;
+                background: $section_bg;
+                opacity: .5;
+                z-index: -1;
+            }
+            
+            i{
+                color: $text_pri_color;
+                margin-top: 50%;
+            }
+        }
+    }
+    .port_bg_1{
+        background-image: url(assets/img/portfolio-1.png);
+    }
+    .port_bg_2{
+        background-image: url(assets/img/portfolio-2.png);
+    }
+    .port_bg_3{
+        background-image: url(assets/img/portfolio-3.png);
+    }
+    .port_bg_4{
+        background-image: url(assets/img/portfolio-4.png);
+    }
+    .port_bg_5{
+        background-image: url(assets/img/portfolio-5.png);
+    }
+    .port_bg_6{
+        background-image: url(assets/img/portfolio-6.png);
+    }
+    .port_bg_7{
+        background-image: url(assets/img/portfolio-7.png);
+    }
+    .port_bg_8{
+        background-image: url(assets/img/portfolio-8.png);
+    }
+    
+    ul{
+        li{
+            a{
+                text-transform: uppercase;
+                color: $section_bg;
+                font-size: 14px;
+                font-weight: 700;
+                border: 1px solid transparent;
+                margin-left: 10px;
+                transition: .3s;
+                
+                &:hover{ color: $theme_color;
+                border: 1px solid $theme_color;
+                }
+                    
+                &.active{
+                    color: $theme_color;                  
+                    border: 1px solid $theme_color;
+                }
+            }
+        }
+    }
+}
+/* Protfolio Style End */

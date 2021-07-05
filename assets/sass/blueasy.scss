@@ -1,0 +1,543 @@
+
+@font-face{
+	src: url('assets/fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf');
+	font-family:'RobotoCondensed-Bold' ;
+}
+
+@font-face{
+	src: url('assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf');
+	font-family:'RobotoCondensed-Regular' ;
+}
+
+@font-face{
+	src: url('assets/fonts/Roboto_Condensed/RobotoCondensed-Light.ttf');
+	font-family:'RobotoCondensed-Light' ;
+}
+
+$theme_color: #4bcaff;
+$text_pri_color: #fff;
+$text_sec_color: #515f67;
+$section_bg: #4a545c;
+$section_padding: 70px 0px;
+
+@mixin after(){
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    left: 120px;
+    top: 120px;
+    }
+
+body{
+    font-family:'RobotoCondensed-Regular' ;
+}
+
+ 
+/* HEADER STYLE START */
+header{
+    background-position: center;
+    background-size: cover;
+    background-image: url(assets/img/blueasy-freebie.jpg);
+    
+    .header_top{
+        position: relative;
+        z-index: 1;
+        padding: 10px 0;
+        
+        &:after{
+            position: absolute;
+            background-color: $section_bg;
+            opacity: .8;
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    
+    .logo h2{
+        color: $text_pri_color;
+        text-transform: uppercase;
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: 700;
+        font-family:'RobotoCondensed-Bold';
+        
+            span{
+                color: $theme_color;
+            }
+        }
+    
+    nav{
+        ul{
+            li{
+                a{
+                    color: $text_pri_color;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 600;
+                    border: 1px solid transparent;
+                    transition: .3s;
+                    margin-left: 10px;
+                    
+                    &:hover{ color: $theme_color;
+                    }
+                    
+                    &.active{
+                     color: $theme_color;                  
+                     border: 1px solid $theme_color;
+                    }
+                }
+            }
+        }
+    }
+    
+    .slogan_text{
+        width: 70%;
+        margin: 200px auto;
+        color: $text_pri_color;
+        
+        h2{
+            font-family:'RobotoCondensed-Light' ;
+            font-size: 42px; 
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.5;
+            span{
+                background-color: $section_bg;
+                padding: 3px 10px;
+            }
+        }
+    }
+}
+/* HEADER STYLE END */
+
+
+/* SERVICES STYLE START */
+.services_area{
+    padding: $section_padding;
+    color: $text_pri_color;
+    background: $theme_color;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        @include after();
+    }
+    
+    img{
+        margin: 30px 0px;
+        
+    }
+    
+    h3{
+        text-transform: uppercase;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+}
+/* SERVICES STYLE END */
+
+
+/* PORTFOLIO STYLE START */
+.portfolio_area{
+    font-family: "RobotoCondensed-Regular";
+    padding: $section_padding;
+    position: relative;
+    
+    &:after{
+        background: $section_bg;
+        @include after();
+    }
+    
+    h2{
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 400;
+        opacity: .7;
+    }
+
+    .portfolio_image{
+        background: $theme_color;
+        width: 100%;
+        height: 270px;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        margin-top: 20px;
+        
+        &:hover .portfolio_hover{
+            display: block;
+        }
+        
+        .portfolio_hover{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            display: none;
+            &:after{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                content: '';
+                left: 0;
+                top: 0;
+                background: $section_bg;
+                opacity: .5;
+                z-index: -1;
+            }
+            
+            i{
+                color: $text_pri_color;
+                margin-top: 50%;
+            }
+        }
+    }
+    .port_bg_1{
+        background-image: url(assets/img/portfolio-1.png);
+    }
+    .port_bg_2{
+        background-image: url(assets/img/portfolio-2.png);
+    }
+    .port_bg_3{
+        background-image: url(assets/img/portfolio-3.png);
+    }
+    .port_bg_4{
+        background-image: url(assets/img/portfolio-4.png);
+    }
+    .port_bg_5{
+        background-image: url(assets/img/portfolio-5.png);
+    }
+    .port_bg_6{
+        background-image: url(assets/img/portfolio-6.png);
+    }
+    .port_bg_7{
+        background-image: url(assets/img/portfolio-7.png);
+    }
+    .port_bg_8{
+        background-image: url(assets/img/portfolio-8.png);
+    }
+    
+    ul{
+        li{
+            a{
+                text-transform: uppercase;
+                color: $section_bg;
+                font-size: 14px;
+                font-weight: 700;
+                border: 1px solid transparent;
+                margin-left: 10px;
+                transition: .3s;
+                
+                &:hover{ color: $theme_color;
+                border: 1px solid $theme_color;
+                }
+                    
+                &.active{
+                    color: $theme_color;                  
+                    border: 1px solid $theme_color;
+                }
+            }
+        }
+    }
+}
+/* PORTFOLIO STYLE END */
+
+
+/* VIDEO STYLE START */
+.video_area{
+    padding: $section_padding;
+    opacity: .8;
+    color: $text_pri_color;
+    background: $section_bg;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        opacity: .5;
+        @include after();
+    }
+    
+    h2{
+        text-transform: uppercase;
+    }
+    
+    
+    
+    p{
+        margin-top: 35px;
+        font-size: 12px;
+        line-height: 2;
+    }
+    
+    .btn{
+        margin-left: -20px;
+        opacity: .5;
+        a{
+            color: #000;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #000;
+            padding: 10px 30px;
+        }
+    }
+   
+}
+/* VIDEO STYLE END */
+
+
+/* TWITTER STYLE START */
+.twitter_area{
+    padding: $section_padding;
+    color: $text_pri_color;
+    opacity: .7;
+    background: $theme_color;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        @include after();
+    }
+    
+    .section_title{
+        text-transform: uppercase;
+        
+    }
+    
+    .section_text{
+        margin-top: 30px;
+        
+        p{
+            margin-bottom: 0;
+            font-size: 14px;
+            word-spacing: 3px;
+            letter-spacing: 2px;
+        }
+    }
+}
+/* TWITTER STYLE END */
+
+
+
+/* ABOUT US STYLE START */
+.about_us{
+    padding: $section_padding;
+    background-image: url(assets/img/about-us.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $text_pri_color;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        opacity: .8;
+        @include after();
+    }
+    
+    .section_title{
+        text-transform: uppercase;
+        opacity: .7;
+    }
+    
+    p{
+        font-size: 12px;
+        margin-top: 20px;
+        margin-bottom: 0; 
+        opacity: .7;
+    }
+    
+    .social_icon{
+        margin-top: 20px;
+        
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        
+        li{
+            list-style: none;
+            display: inline-block;
+            
+            a{
+            text-decoration: none;
+            color: $text_pri_color;
+                font-size: 20px;
+            opacity: .7;
+                i{
+                padding: 10px;
+                margin-right: 10px;
+                border: 1px solid $text_pri_color;
+            }
+        }
+        }
+    }
+}
+/* ABOUT US STYLE END */
+
+
+/* TESTIMONIALS STYLE START */
+.Testimonials_section{
+    padding: $section_padding;
+    color: $text_sec_color;
+    position: relative;
+    
+    &:after{
+        background: $text_sec_color;
+        opacity: .8;
+        @include after();
+    }
+ .section_title{
+        text-transform: uppercase;
+        opacity: .7;
+    }
+    h1{
+        font-size: 72px;
+    }
+    p{
+        font-size: 14px;
+    }
+    h3{
+        font-size: 14px;
+        color: $theme_color;
+    }
+}
+/* TESTIMONIALS STYLE END */
+
+
+/* CONTACT STYLE START */
+.contact_section{
+    padding: $section_padding;
+    background-image: url(assets/img/contact.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $text_pri_color;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        opacity: .8;
+        @include after();
+    }
+    
+    .section_title{
+        text-transform: uppercase;
+        opacity: .7;
+    }
+    
+    .section_text{
+        margin-top: 50px;
+    }
+    
+    .form_group{
+        margin-top: 30px;
+    }
+    
+    p{
+        font-size: 12px;
+        margin-bottom: 0;
+        line-height: 2;
+    }
+    
+    label{
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    input, input:focus{
+        background: transparent;
+        border-radius: 0px;
+        
+    }
+    
+    textarea, textarea:focus{
+        background: transparent;
+        border-radius: 0px;
+    }
+    
+    
+    
+    address{
+        margin-top: 20px;
+    }
+    
+    .btn{
+        color: $text_pri_color;
+        background: $theme_color;
+        padding: 10px 100px;
+        font-size: 14px;
+        font-weight: 700;
+        }
+}
+/* CONTACT STYLE END */
+
+
+/* FOOTER STYLE START */
+.footer_section{
+    padding: 30px 0;
+    color: $text_pri_color;
+    background: $section_bg;
+    
+    .footer_menu{
+        
+        
+        
+        ul{
+            margin: 0;
+            padding: 0;
+            
+            li{
+                list-style: none;
+                display: inline-block;
+                
+                
+               
+            
+                a{
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: $text_pri_color;
+                    padding: 0 10px;
+                    opacity: .7;
+                    position: relative;
+                    
+                     &:after{
+                        position: absolute;
+                        width: 1px;
+                        height: 10px;
+                        background: #fff;
+                        opacity: .3;
+                        content: '';
+                        left: 0;
+                        top: 5px;
+                    }
+                }
+                
+                .after_li{
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    h6{
+        font-size: 12px;
+        opacity: .5;
+        margin-top: 30%;
+    }
+}
+/* FOOTER STYLE END */

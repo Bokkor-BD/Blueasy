@@ -1,0 +1,45 @@
+
+@font-face{
+	src: url('assets/fonts/Imbue/Imbue-VariableFont_opsz,wght.ttf');
+	font-family: 'Imbue', serif;
+}
+
+
+$theme_color: #4bcaff;
+$text_pri_color: #fff;
+$text_sec_color: #515f67;
+$section_bg: #4a545c;
+$section_padding: 70px 0px;
+
+@mixin after(){
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    left: 120px;
+    top: 120px;
+    }
+
+body{
+    font-family: 'Imbue', serif;
+}
+
+@import 'header';
+
+@import 'service';
+
+@import 'portfolio';
+
+@import 'video';
+
+@import 'twitter';
+
+@import 'about-us';
+
+@import 'testimonials';
+
+@import 'contact-us';
+
+@import 'footer';
+
+

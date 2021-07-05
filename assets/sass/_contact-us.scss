@@ -1,0 +1,66 @@
+/* CONTACT STYLE START */
+.contact_section{
+    padding: $section_padding;
+    background-image: url(assets/img/contact.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $text_pri_color;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        opacity: .8;
+        @include after();
+    }
+    
+    .section_title{
+        text-transform: uppercase;
+        opacity: .7;
+    }
+    
+    .section_text{
+        margin-top: 50px;
+    }
+    
+    .form_group{
+        margin-top: 30px;
+    }
+    
+    p{
+        font-size: 12px;
+        margin-bottom: 0;
+        line-height: 2;
+    }
+    
+    label{
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    input, input:focus{
+        background: transparent;
+        border-radius: 0px;
+        
+    }
+    
+    textarea, textarea:focus{
+        background: transparent;
+        border-radius: 0px;
+    }
+    
+    
+    
+    address{
+        margin-top: 20px;
+    }
+    
+    .btn{
+        color: $text_pri_color;
+        background: $theme_color;
+        padding: 10px 100px;
+        font-size: 14px;
+        font-weight: 700;
+        }
+}
+/* CONTACT STYLE END */

@@ -1,0 +1,29 @@
+/* Service Style Start */
+.services_area{
+    padding: $section_padding;
+    color: $text_pri_color;
+    background: $theme_color;
+    position: relative;
+    
+    &:after{
+        background: $text_pri_color;
+        @include after();
+    }
+    
+    img{
+        margin: 30px 0px;
+        
+    }
+    
+    h3{
+        text-transform: uppercase;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+}
+/* Service Style End */

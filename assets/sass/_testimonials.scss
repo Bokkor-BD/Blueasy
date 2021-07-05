@@ -1,0 +1,27 @@
+/* TESTIMONIALS STYLE START */
+.Testimonials_section{
+    padding: $section_padding;
+    color: $text_sec_color;
+    position: relative;
+    
+    &:after{
+        background: $text_sec_color;
+        opacity: .8;
+        @include after();
+    }
+ .section_title{
+        text-transform: uppercase;
+        opacity: .7;
+    }
+    h1{
+        font-size: 72px;
+    }
+    p{
+        font-size: 14px;
+    }
+    h3{
+        font-size: 14px;
+        color: $theme_color;
+    }
+}
+/* TESTIMONIALS STYLE END */
